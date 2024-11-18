@@ -45,33 +45,33 @@
             width: 1em;
         }
         .workflow {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            border-radius: 50%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #dcedc8;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .workflow div {
-            flex: 1;
-            text-align: center;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #dcedc8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #388e3c;
             font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .workflow div:not(:last-child) {
-            position: relative;
-        }
-        .workflow div:not(:last-child)::after {
-            content: '→';
-            position: absolute;
-            right: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #388e3c;
-            font-size: 20px;
-        }
+        .identify { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .prevent { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+        .detect { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+        .respond { top: 50%; left: 0; transform: translate(-50%, -50%); }
+        .improve { top: 50%; left: 50%; transform: translate(-50%, -50%); }
     </style>
 </head>
 <body>
@@ -90,11 +90,11 @@
 
         <h2>SOC Workflow</h2>
         <div class="workflow">
-            <div>Identify</div>
-            <div>Detect</div>
-            <div>Prevent</div>
-            <div>Respond</div>
-            <div>Improve</div>
+            <div class="identify">Identify</div>
+            <div class="prevent">Prevent</div>
+            <div class="detect">Detect</div>
+            <div class="respond">Respond</div>
+            <div class="improve">Improve</div>
         </div>
     </div>
 </body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC Team and Workflow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e3f2fd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        li::before {
+            content: "\2022";
+            color: #1976d2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
+        .workflow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #dcedc8;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .workflow div {
+            flex: 1;
+            text-align: center;
+            color: #388e3c;
+            font-weight: bold;
+        }
+        .workflow div:not(:last-child) {
+            position: relative;
+        }
+        .workflow div:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #388e3c;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SOC Team Roles</h2>
+        <ul>
+            <li>SOC Analyst Level 1</li>
+            <li>SOC Analyst Level 2</li>
+            <li>Incident Handler / Responders (Red, Blue Team)</li>
+            <li>Forensics Investigator</li>
+            <li>Cyber Threat Intelligence</li>
+            <li>Cyber Threat Hunter</li>
+            <li>SOC Manager</li>
+            <li>CISO</li>
+        </ul>
+
+        <h2>SOC Workflow</h2>
+        <div class="workflow">
+            <div>Identify</div>
+            <div>Detect</div>
+            <div>Prevent</div>
+            <div>Respond</div>
+            <div>Improve</div>
+        </div>
+    </div>
+</body>
+</html>
